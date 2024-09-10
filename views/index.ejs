@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <ul>
+      <% for(const message of messageArray) { %>
+        <span><%= message.user%></span> <br>
+        <span><%= message.added%></span> <br>
+        <span><%= message.text%></span> <br>
+        <br>
+      <% } %>
+    </ul>
+  </body>
+</html>
