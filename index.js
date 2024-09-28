@@ -1,9 +1,8 @@
 const express = require("express")
 const path = require("node:path");
+const newRouter = require("./routes/newRouter");
 
 const app = express();
-//const newRouter = require("routes/newRouter");
-
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -14,7 +13,7 @@ const messages = [
     added: new Date()
   },
   {
-    text: "Hello World!",
+    text: "Hello World!!",
     user: "Charles",
     added: new Date()
   }
@@ -24,8 +23,9 @@ app.get("/", (req, res) => {
   res.render("index", {messageArray: messages});
 });
 
+app.use("/new", newRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log('test');
+  console.log('Server running...');
 })
