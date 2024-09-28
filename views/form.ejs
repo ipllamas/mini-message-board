@@ -1,11 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mini Message Board</title>
+  </head>
 <body>
   <h1>New Message Form</h1>
-  <form action="POST" action="/new">
+  <form method="POST" action="/new">
     <label for="author">Author:</label>
-    <input type="text" id="author" name="author"><br><br>
+    <input type="text" id="author" name="authorText"><br><br>
     <label for="message">Message:</label>
-    <input type="text" id="message" name="author"><br><br>
+    <input type="text" id="message" name="messageText"><br><br>
     <input type="submit" value="submit">
   </form>
 
